@@ -7,8 +7,6 @@
 
     let recipe;
     const handleSelectRecipe = () => {
-        console.log(recipe);
-
         fruits.update((_) => {
             let newFruits = {};
             recipe.fruits.forEach((fruit) => {
@@ -19,8 +17,6 @@
             });
             return newFruits;
         });
-
-        console.log($fruits);
     };
 
     const recipes = [
