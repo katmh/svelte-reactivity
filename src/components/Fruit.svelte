@@ -1,9 +1,9 @@
 <script>
     import { fruits } from "../stores.js";
-    import { onMount, afterUpdate } from "svelte";
+    import { afterUpdate } from "svelte";
 
     export let id = "";
-    const type = $fruits[id].type;
+    $: type = $fruits[id].type;
     const getRandInt = () => Math.floor(Math.random() * 10);
 
     afterUpdate(() => {
